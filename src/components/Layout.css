@@ -1,0 +1,117 @@
+.layout {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 16.6666%;
+  width: 1440px;
+  height: 100%;
+  border-left: solid 2px rgb(66, 86, 122, 0.1);
+  border-right: solid 2px rgb(66, 86, 122, 0.1);
+}
+.middle,
+.horizontal {
+  position: absolute;
+  opacity: 0.1;
+  background: #42567a;
+}
+.middle {
+  height: 100%;
+  width: 2px;
+  left: 719px;
+}
+.horizontal {
+  width: 1440px;
+  height: 1px;
+  top: 44.4444%;
+  left: 0;
+}
+.circle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8%;
+  width: 530px;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  border: 2px solid rgb(66, 86, 122, 0.2);
+}
+.gradient {
+  position: absolute;
+  height: 11.1111%;
+  width: 5px;
+  top: 16.3888%;
+  left: 16.7708%;
+  background-image: linear-gradient(180deg, #3877ee -5%, #ef5da8 85%);
+}
+.dates {
+  position: absolute;
+  width: 18.3854%;
+  height: 12.4074%;
+  top: 15.7407%;
+  left: 20.8333%;
+  font-family: "PT Sans";
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 67px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #42567a;
+}
+.arrow {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 55px;
+  height: 480px;
+}
+.nav-button-active,
+.nav-button {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background: #42567a;
+  margin-top: -30px;
+
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0;
+  line-height: 30px;
+  color: #42567a;
+
+  transition: all ease 0.3s;
+}
+.nav-button-active,
+.nav-button:hover {
+  margin-top: -55px;
+  width: 55px;
+  height: 55px;
+  background: #f4f5f9;
+  border: solid 1px rgb(48, 62, 88, 0.5);
+  font-size: 20px;
+}
+@media only screen and (max-width: 430px) {
+  .dates {
+    position: absolute;
+    width: 123px;
+    height: 48px;
+    left: 20px;
+    top: 59px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+  }
+  .horizontal {
+    width: 87.5%;
+    height: 1px;
+    left: 6.25%;
+    top: 54.4609%;
+    opacity: 1;
+    background: #c7cdd9;
+  }
+}

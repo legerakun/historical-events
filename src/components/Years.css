@@ -1,0 +1,35 @@
+.start,
+.end {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 200px;
+  line-height: 160px;
+  letter-spacing: -0.02em;
+  top: 37.037%;
+}
+.start {
+	left: 27.9687%;
+  color: #5d5fef;
+}
+.end {
+	left: 55.1213%;
+  color: #ef5da8;
+}
+@media only screen and (max-width: 430px) {
+  .start,
+  .end {
+    font-size: 56px;
+    line-height: 72px;
+    top: 28.6971%;
+  }
+  .start {
+    left: 6.25%;
+  }
+  .end {
+    right: 6.25%;
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "1960 1970": {
+    "1964": "IBM introduces its System/360, the first of its computers to use interchangeable software.",
+    "1967": "IBM creates the first floppy disk.",
+    "1968": "Intel Corporation is founded by Robert Noyce and Gordon Moore.",
+    "1969": "The Apollo 11 space craft lands on the moon and Neil Armstrong becomes the first human to walk on the moon."
+  },
+  "1971 1980": {
+    "1971": "The first laser printer is developed at Xerox PARC.",
+    "1972": "The first video game console called the Magnavox Odyssey is demonstrated.",
+    "1974": "Intel's improved microprocessor chip is introduced, the 8080 becomes a standard in the computer industry.",
+    "1975": "Bill Gates and Paul Allen Establish Microsoft April 4, 1975.",
+    "1976": "Steve Wozniak designs the first Apple, the Apple I computer.",
+    "1977": "Apple Computers Apple II, the first personal computer with color graphics is demonstrated.",
+    "1978": "The 5.25-inch floppy disk becomes an industry standard."
+  },
+  "1981 1990": {
+    "1981": "IBM releases the first personal computer.",
+    "1982": "The TIME magazine nominates the personal computer as the 'machine of the year'.",
+    "1983": "GPS The Global Positioning System was opened for use by civilian aircraft.",
+    "1984": "Apple releases the Macintosh Computer.",
+    "1985": "Microsoft releases Windows 1.0.",
+    "1986": "The first IBM PC virus, a boot sector virus call Brain, is released in the wild.",
+    "1987": "The first cell phone small enough to fit into a pocket.",
+    "1989": "The number of computers in use worldwide reaches 100 million units."
+  },
+  "1991 2000": {
+    "1993": "Lynx is launched: a texted-based browser that couldn't display any graphic content.",
+    "1995": "Amazon and eBay are launched.",
+    "1996": "Universal serial Bus (USB) is created by a group of seven companies.",
+    "1997": "Wi-Fi becomes available publicly.",
+    "1999": "Bluetooth 1.0 is launched."
+  },
+  "2001 2010": {
+    "2001": "Apple released the iPod, which became the most popular MP3 player in history.",
+    "2003": "Web services standards are developed.",
+    "2004": "Facebook (limited to Harvard students only) started this year.",
+    "2005": "YouTube, the first video sharing site came online.",
+    "2006": "Twitter, the micro blogging site opens with 140 characters maximum per message.",
+    "2007": "Apple introduces the iPhone in June revolutionizing the mobile phone industry.",
+    "2009": "Digital television became the broadcast standard.",
+    "2010": "Apple introduced the iPad."
+  },
+  "2011 2020": {
+    "2012": "Tablet computers become the fasted adopted technology hardware in history.",
+    "2013": "The iBeacon was introduced at Apple.",
+    "2014": "Facebook bought the Oculus VR company",
+    "2015": "Microsoft releases the operating system Windows 10.",
+    "2016": "Grip, becomes one of the first companies to use artificial intelligence (AI) in their event matchmaking system.",
+    "2017": "Many companies are developing their own VR headsets, including HTC, Google, Apple, Amazon, Microsoft, Sony, and Samsung.",
+    "2020": "COVID-19 pandemic."
+  }
+}

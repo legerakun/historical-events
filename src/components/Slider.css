@@ -1,0 +1,71 @@
+.slider {
+  position: absolute;
+	top: 77.8703%;
+	left: 20.8333%;
+	width: 62.5%;
+	height: 22%;
+}
+h1, h2 {
+	margin-block-start: 0;
+  margin-block-end: 0;
+}
+h1 {
+	font-family: 'Bebas Neue';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 120%;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	color: #3877EE;
+}
+h2 {
+	font-family: 'PT Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+	color: #42567A;
+}
+.navigation {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 81.6666%;
+	width: 2.08333%;
+	aspect-ratio: 1 / 1;
+	border-radius: 100%;
+	background: white;
+	cursor: pointer;
+}
+.nav-arrow {
+	max-width: 10px;
+	max-height: 10px;
+	filter: invert(33%) sepia(84%) saturate(2473%) hue-rotate(211deg) brightness(104%) contrast(87%);
+}
+.next {
+	left: 87.5%;
+}
+.prev {
+	left: 17.7083%;
+	transform: rotate(180deg);
+}
+.swiper-button-disabled {
+	display: none;
+}
+@media only screen and (max-width: 430px) { 
+	.slider {
+		top: 58.1784%;
+		left: 6.25%;
+		width: 87.5%;
+		height: 25.1895%;
+	}
+	h1 {
+		font-size: 16px;
+	}
+	h2 {
+		font-size: 14px;
+		line-height: 145%;
+	}
+}
