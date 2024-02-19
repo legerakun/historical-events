@@ -2,12 +2,13 @@ import type { NavigationOptions } from "swiper/types";
 
 import { useContext, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import { StateContext } from "@/libs/reducer";
 import { Button } from "./utils/Button";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "@/components/Slider.css";
 
 import arrow from "/arrow.svg";
@@ -21,6 +22,7 @@ export const Slider = () => {
   const { width } = useWindowDimensions();
   const nextEl = useRef(null);
   const prevEl = useRef(null);
+  const pagiEl = useRef(null);
 
   const slides = Object.entries(state.events).map((slide) => {
     const [year, event] = slide;
@@ -36,11 +38,12 @@ export const Slider = () => {
   return (
     <>
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Pagination]}
         navigation={{
           nextEl: nextEl.current,
           prevEl: prevEl.current,
         }}
+        pagination={width > 430 ? false : {el: pagiEl.current}}
         onBeforeInit={(swiper) => {
           const navigation = swiper.params.navigation as NavigationOptions;
 
@@ -54,7 +57,7 @@ export const Slider = () => {
       >
         {slides}
       </Swiper>
-      {width > 430 && (
+      {width > 430 ? (
         <>
           <Button
             cssButton={"navigation next"}
@@ -71,7 +74,8 @@ export const Slider = () => {
             nodeRef={prevEl}
           />
         </>
-      )}
+      )
+    : <div ref={pagiEl} className="pagination"></div>}
     </>
   );
 };
