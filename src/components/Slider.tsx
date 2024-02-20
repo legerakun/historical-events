@@ -37,28 +37,8 @@ export const Slider = () => {
 
   return (
     <>
-      <Swiper
-        modules={[Navigation, Pagination]}
-        navigation={{
-          nextEl: nextEl.current,
-          prevEl: prevEl.current,
-        }}
-        pagination={width > 430 ? false : {el: pagiEl.current}}
-        onBeforeInit={(swiper) => {
-          const navigation = swiper.params.navigation as NavigationOptions;
-
-          navigation.nextEl = nextEl.current;
-          navigation.prevEl = prevEl.current;
-        }}
-        className="slider"
-        spaceBetween={120}
-        slidesPerView={width > 430 ? 3 : 2}
-        speed={500}
-      >
-        {slides}
-      </Swiper>
-      {width > 430 ? (
-        <>
+      <div className="slider-container">
+        {width > 900 && (
           <Button
             cssButton={"navigation next"}
             cssArrow={"nav-arrow"}
@@ -66,6 +46,28 @@ export const Slider = () => {
             alt={"next"}
             nodeRef={nextEl}
           />
+        )}
+        <Swiper
+          modules={[Navigation, Pagination]}
+          navigation={{
+            nextEl: nextEl.current,
+            prevEl: prevEl.current,
+          }}
+          pagination={width > 900 ? false : { el: pagiEl.current }}
+          onBeforeInit={(swiper) => {
+            const navigation = swiper.params.navigation as NavigationOptions;
+
+            navigation.nextEl = nextEl.current;
+            navigation.prevEl = prevEl.current;
+          }}
+          className="slider"
+          spaceBetween={width > 1440 ? 120 : width > 930 ? 80 : 40}
+          slidesPerView={width > 1440 ? 3 : 2}
+          speed={500}
+        >
+          {slides}
+        </Swiper>
+        {width > 930 && (
           <Button
             cssButton={"navigation prev"}
             cssArrow={"nav-arrow"}
@@ -73,9 +75,11 @@ export const Slider = () => {
             alt={"prev"}
             nodeRef={prevEl}
           />
-        </>
-      )
-    : <div ref={pagiEl} className="pagination"></div>}
+        ) }
+      </div>
+      {width < 930 && (
+        <div ref={pagiEl} className="pagination"></div>
+      )}
     </>
   );
 };

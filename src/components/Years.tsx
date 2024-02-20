@@ -36,9 +36,9 @@ export const Years = () => {
   const second = Number(state.years.substring(5, 9));
 
   return (
-    <>
+    <div className="years">
       <Counter date={first} />
       <Counter date={second} second={true} />
-    </>
+    </div>
   );
 };

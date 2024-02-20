@@ -15,11 +15,11 @@ export const Navigation = () => {
   const prevEl = useRef(null);
 
   return (
-    <>
+    <div className="navigation-container">
       <p className="block-number">
         {state.blockNumber + 1}/{state.blockCount}
       </p>
-      <div className="navigation-container">
+      <div className="navigation-flex">
         <Button
           cssButton={"navigation-button prev-year"}
           cssArrow={
@@ -55,6 +55,6 @@ export const Navigation = () => {
           }}
         />
       </div>
-    </>
+    </div>
   );
 };

@@ -1,21 +1,20 @@
-import { useContext, useRef } from "react";
-import { StateContext } from "@/libs/reducer";
 import gsap from "gsap";
+import { useContext, useRef } from "react";
 import { useGSAP } from "@gsap/react";
+import { StateContext } from "@/libs/reducer";
+import { useWindowDimensions } from "@/libs/utils";
 
-import { Years } from "./Years";
+import { Years } from "@/components/Years";
 
 import "@/components/Layout.css";
-import { useWindowDimensions } from "@/libs/utils";
 
 const Button = ({ number }: { number: number }) => {
   const { state, dispatch } = useContext(StateContext);
   const arrow = useRef(null);
   const button = useRef(null);
 
-  const cssName = state.blockNumber === number 
-    ? "nav-button-active" 
-    : "nav-button";
+  const cssName =
+    state.blockNumber === number ? "nav-button-active" : "nav-button";
 
   if (state.blockCount === undefined) return;
   if (state.blockNumber === undefined) return;
@@ -34,6 +33,7 @@ const Button = ({ number }: { number: number }) => {
 
       gsap.to(button.current, {
         rotate: (-theta * 180) / Math.PI,
+        duration: 0,
       });
     },
     { dependencies: [state.blockNumber], scope: arrow }
@@ -44,10 +44,12 @@ const Button = ({ number }: { number: number }) => {
       <button
         className={cssName}
         ref={button}
-        onClick={() => dispatch({ 
-          type: "SET_YEAR", 
-          blockNumber: number 
-        })}
+        onClick={() =>
+          dispatch({
+            type: "SET_YEAR",
+            blockNumber: number,
+          })
+        }
       >
         {number + 1}
       </button>
@@ -57,8 +59,9 @@ const Button = ({ number }: { number: number }) => {
 
 export const Layout = () => {
   const { state } = useContext(StateContext);
-  const buttons = [];
+
   const { width } = useWindowDimensions();
+  const buttons = [];
 
   for (let i = 0; i < state.blockCount!; i++) {
     buttons.push(<Button number={i} key={"nav-button " + i} />);
@@ -66,17 +69,27 @@ export const Layout = () => {
 
   return (
     <>
-      {width > 430 && <hr className="gradient" />}
-      <p className="dates">Historical Events</p>
-      <Years />
-      {width > 430 ? (
+      {width > 900 ? (
         <div className="layout">
-          <hr className="middle" />
-          <hr className="horizontal" />
-          <div className="circle">{buttons}</div>
+          {width > 1440 && 
+            <>
+              <hr className="middle" />
+              <hr className="horizontal" />
+            </>
+          }
+          <div className="circle">
+            <Years />
+            {buttons}
+          </div>
+          <hr className="gradient" />
+          <p className="dates">Historical Events</p>
         </div>
       ) : (
-        <hr className="horizontal" />
+        <>
+          <Years />
+          <hr className="horizontal" />
+          <p className="dates">Historical Events</p>
+        </>
       )}
     </>
   );

@@ -1,7 +1,16 @@
+html, body, #root {
+  min-width: 100vw;
+  min-height: 100vh;
+}
 body {
   margin: 0;
   font-family: "PT-sans";
   background: #f4f5f9;
+}
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 hr {
   margin-block-start: 0;
