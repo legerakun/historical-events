@@ -64,6 +64,7 @@
   justify-content: center;
   width: 55px;
   height: 480px;
+  z-index: 2;
 }
 .nav-button-active,
 .nav-button {
